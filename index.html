@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playlist Maker</title>
+  <link rel="stylesheet" href="./bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="container is-fluid">
+    <main>
+    </main>
+  </div>
+
+  <template id="playlistFormTemplate">
+    <form action="" class="box mt-5 ">
+      <div class="field">
+        <label class="label">Add New Playlist</label>
+        <div class="control">
+          <input class="input" name="playlist-name" type="text" placeholder="Playlist Name">
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button id="submit-playlist-button" class="button is-link add-playlist">Submit</button>
+        </div>
+        <div class="control">
+          <button id="cancel-playlist-button" class="button is-link is-light">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </template>
+
+  <template id="songFormTemplate">
+    <form action="" class="">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input" name="song-name" type="text" placeholder="Song title">
+        </div>
+        <div class="control">
+          <button id="submit-song-button" class="button is-info">
+            Add
+          </button>
+        </div>
+      </div>
+    </form>
+  </template>
+
+  <template id="playlistsTemplate">
+    <div class="playlists-container">
+    </div>
+  </template>
+
+  <template id="playlistCounterTemplate">
+    <h2>Playlist Count (0)</h2>
+  </template>
+
+  <template id="playlistTemplate">
+    <div class="playlist card mb-3">
+      <header class="card-header is-flex is-align-items-center pr-4">
+        <p class="card-header-title">${name}</p>
+        <button id="remove-playlist-button" class="button is-small is-danger">
+          Delete
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="menu mb-3">
+          <ul class="menu-list"></ul>
+        </div>
+        <div class="add-song-form-container"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="./scripts/main.js" type="module"></script>
+  
+</body>
+</html>
